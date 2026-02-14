@@ -1,0 +1,10 @@
+f both target the same element:
+
+#box { color: red; }
+.box { color: blue; }
+
+👉 id WINS
+Because id has higher specificity
+
+✔ Use class → 90% of the time
+✔ Use id → when it’s truly unique or needed for JS

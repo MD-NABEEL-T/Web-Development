@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .npurple{
+            color:purple;
+        }
+        .yellowe{
+            color:yellow;
+        }
+        h1{
+            color:blue;
+
+        }
+    </style>
+</head>
+<body>
+    <h1 class="yellowe npurple">CSS Specificity</h1>
+</body>
+</html>
+
+<!-- | Selector type                  | Specificity score |
+| ------------------------------ | ----------------- |
+| element (`h1`)                 | 1                 |
+| class (`.yellowe`, `.npurple`) | 10                |
+| id (`#id`)                     | 100               | -->
+
+<!-- When specificity is equal, the rule written LAST wins
+.npurple { color: purple; }   /* written first */
+.yellowe { color: yellow; }   /* written second */ -->

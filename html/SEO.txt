@@ -1,0 +1,26 @@
+
+    Lighthouse is a tool built by Google that audits your website.
+     Cumulative Layout Shift
+     Example:
+
+Button moves suddenly
+
+Image loads and pushes text down
+
+Ads shifting content
+
+Good score:
+
+✅ Less than 0.1
+
+    <!-- LCP :Largest Contentful Paint-->
+
+    How fast the main content of the page loads.
+
+👉 Example: Hero image or big heading.
+
+Good score:
+
+✅ Under 2.5 seconds
+
+     <!-- FID -->
