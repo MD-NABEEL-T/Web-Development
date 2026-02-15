@@ -1,0 +1,3 @@
+today i have to complete this js stuff such that i move to node js tomorrow inshallah .
+1,basic
+2,dt

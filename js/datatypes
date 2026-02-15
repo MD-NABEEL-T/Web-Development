@@ -1,0 +1,4 @@
+primitive datatypes
+null,number,string,symbol,undefined ,boolean
+non primitive datatypes
+object,function,arrays.

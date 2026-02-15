@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+function calculate(a, b, operate) {
+  // operate is the callback function, executed inside calculate
+  return operate(a, b);
+}
+
+function add(a, b) {
+  return a + b;
+}
+
+function multiply(a, b) {
+  return a * b;
+}
+
+// Pass the 'add' function as a callback
+console.log(calculate(10, 5, add)); // Output: 15
+// Pass the 'multiply' function as a callback
+console.log(calculate(10, 5, multiply)); // Output: 50
+
+    </script>
+</body>
+
+</html>
