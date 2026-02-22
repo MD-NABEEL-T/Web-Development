@@ -40,3 +40,33 @@
 .p-1 {
     padding: 10px;
 }
+
+/* ===== Custom Dark Scrollbar ===== */
+
+/* Width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track (background) */
+::-webkit-scrollbar-track {
+  background: #111;   /* dark background */
+}
+
+/* Handle (scroll thumb) */
+::-webkit-scrollbar-thumb {
+  background: #2a2a2a; 
+  border-radius: 10px;
+  border: 2px solid #111;  /* creates padding effect */
+}
+
+/* Hover effect */
+::-webkit-scrollbar-thumb:hover {
+  background: #3a3a3a;
+}
+
+/* ===== Firefox Support ===== */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #2a2a2a #111; /* thumb track */
+}

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- Alright i have to complete this by today -->
+<!-- Alright completed till 2:32 hour only and i dont think i have time to move on like this so well see later until then whatever you have done is enough.-->
+
 <head>
     <!-- hugeicons website for icons -->
     <meta charset="UTF-8">
@@ -12,6 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
@@ -38,6 +40,12 @@
                     <h2>
                         Your Library
                     </h2>
+
+                </div>
+
+                <div class="song-list">
+                    <ul>
+                    </ul>
                 </div>
 
                 <div class="footer">
@@ -66,27 +74,54 @@
                     </svg>
                 </div>
                 <div class="buttons">
-                    <button>Sign up</button>
-                    <button>Login</button>
+                    <button class="signupbtn">Sign up</button>
+                    <button class="loginbtn">Log in</button>
                 </div>
             </div>
             <div class="spotifyPlaylists">
                 <h1>Spotify Playlists</h1>
                 <div class="cardContainer">
+
                     <div class="card">
+                        <div class="play-btn">
+                            <i class="fas fa-play"></i>
+                        </div>
                         <img src="img/ironManSample1.jfif" alt="">
                         <h2>Happy Hits</h2>
                         <p>Hits to boost your mood.</p>
                     </div>
                     <div class="card">
+                        <div class="play-btn">
+                            <i class="fas fa-play"></i>
+                        </div>
                         <img src="img/ironManSample1.jfif" alt="">
                         <h2>Happy Hits</h2>
                         <p>Hits to boost your mood.</p>
                     </div>
                 </div>
+                <div class="playbar">
+                    <div class="seekbar">
+                        <div class="circle">
+
+                        </div>
+                    </div>
+                    <div class="songingo">
+
+                    </div>
+                    <div class="songbuttons">
+                        <img id="previous" src="img/prevsong.svg" alt="">
+                        <img id="play" src="img/play.svg" alt="">
+                        <img id="next" src="img/nextsong.svg" alt="">
+                    </div>
+                    <div class="songtime">
+
+                    </div>
+                </div>
             </div>
+
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 
 </html>

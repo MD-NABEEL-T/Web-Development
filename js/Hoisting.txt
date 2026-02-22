@@ -1,0 +1,77 @@
+🔥 What is Hoisting?
+
+Hoisting means JavaScript moves declarations to the top of their scope before execution.
+
+Important:
+It moves declarations, NOT initializations.
+
+JavaScript internally does:
+
+Memory Creation Phase (Compilation)
+
+Execution Phase
+
+During the memory phase, variables and functions are “hoisted”.
+
+📦 1️⃣ Hoisting with var
+console.log(a);
+var a = 10;
+
+
+Output:
+
+undefined
+
+
+Why?
+
+Internally JS sees it like this:
+
+var a;        // declaration hoisted
+console.log(a);  // undefined
+a = 10;       // initialization happens later
+
+
+So:
+
+var is hoisted
+
+It is initialized with undefined
+
+That’s why you don’t get an error.
+
+📦 2️⃣ Hoisting with let and const
+console.log(b);
+let b = 20;
+
+
+Output:
+
+ReferenceError
+
+
+Why?
+
+Because let and const are hoisted BUT:
+
+They are placed in something called the Temporal Dead Zone (TDZ).
+
+Meaning:
+They exist in memory, but you cannot access them before initialization.
+
+So this fails:
+
+console.log(b); ❌
+let b = 20;
+
+
+But this works:
+
+let b = 20;
+console.log(b); ✅
+
+🏆 Best Practice (Be Professional)
+
+✔ Always declare variables at the top
+✔ Prefer let and const
+✔ Avoid relying on hoisting behavior
