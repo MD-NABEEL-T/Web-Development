@@ -1,0 +1,25 @@
+here we have learnt to install express 
+
+Node.js is a runtime environment that allows you to run JavaScript outside the browser.
+It is built on Chrome’s V8 engine and allows:
+
+
+Reading & writing files
+
+Creating servers
+
+Handling requests
+
+Managing databases
+
+Running scripts from terminal
+
+
+Express.js is a framework built on top of Node.js that makes backend development easier.
+Think like this:
+
+Node.js = Engine
+Express.js = Car body built on that engine
+
+Node alone can create servers, but it becomes messy.
+Express gives structure, simplicity, and clean routing.

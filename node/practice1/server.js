@@ -1,0 +1,3 @@
+console.log("I CAN DO THIS ALL DAY")
+//  HERE I HAVE DELETED NODE MODULES BUT SINCE...
+// it is written in package.json as dependencies :{slugify} so if you run npm i then the package will install ok
