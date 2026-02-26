@@ -1,0 +1,30 @@
+We use fetch() when we want to send a request from JavaScript without reloading the page.
+Here:
+
+Browser doesn’t change page
+
+JS asks server for data
+
+Server responds
+
+JS updates UI
+
+| Situation               | What to Use                     |
+| ----------------------- | ------------------------------- |
+| Open a page             | Browser automatically sends GET |
+| Submit form normally    | Browser sends POST              |
+| Background data loading | fetch()                         |
+| API calls               | fetch()                         |
+| Without page reload     | fetch()                         |
+
+💡 So the flow becomes:
+
+Frontend (fetch) → sends request → Backend (Express route) → sends response → Frontend updates UI
+
+That’s full-stack communication.
+
+⚡ Important Correction
+
+fetch() is frontend, yes.
+
+But the request still goes to the server.

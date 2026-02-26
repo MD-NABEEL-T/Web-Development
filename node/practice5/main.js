@@ -2,7 +2,13 @@ const express = require('express')
 const app = express()
 const port = 3000
 
-app.use(express.static('public'))
+
+// Browser sends a GET request
+// Express checks if a matching app.get() route exists
+// If yes → runs that handler
+// app.use(express.static('public'))
+
+
 //with the help of this we can access the files inside public dir
 
 // app.get or app.post or app.post or app.delete(path,handler)

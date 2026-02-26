@@ -1,0 +1,7 @@
+1,handling post & other requests
+2,Chaining of requests
+3,Serving html files
+4,Installing Postman
+5,Express Router
+
+use post request for safety and large data since get manages ony small data

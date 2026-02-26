@@ -2,9 +2,3 @@ node js is used for server side rendering .
 
 npm i --global nodemon
 after this when you run nodemon main.js then server will auto restart if change the code .
-
-
-
-
-
-
