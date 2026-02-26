@@ -1,0 +1,66 @@
+If you want to show a YouTube video on your webpage, you should use <iframe>, not <video>.
+
+Here’s why 👇
+
+🔹 Why NOT <video> for YouTube?
+
+The <video> tag is used when:
+
+You have the actual video file (like .mp4, .webm)
+
+The file is stored on your server or locally
+
+Example:
+
+<video controls>
+  <source src="myvideo.mp4" type="video/mp4">
+</video>
+
+This won’t work with a normal YouTube link like:
+
+https://youtube.com/watch?v=xxxx
+
+Because YouTube doesn’t give you direct access to the raw video file.
+
+🔹 Why <iframe> Works for YouTube
+
+YouTube provides an embed link, which loads their player inside your page.
+
+Example:
+
+<iframe 
+  width="560" 
+  height="315" 
+  src="https://www.youtube.com/embed/VIDEO_ID"
+  title="YouTube video player"
+  frameborder="0"
+  allowfullscreen>
+</iframe>
+
+👉 Notice watch?v= becomes embed/VIDEO_ID
+
+So yes —
+✅ YouTube video → use <iframe>
+✅ Your own video file → use <video>
+
+Since you're building frontend projects for internships, here’s a pro tip:
+Always make embedded videos responsive.
+
+Example:
+
+<div class="video-container">
+  <iframe src="https://www.youtube.com/embed/VIDEO_ID" 
+          frameborder="0" 
+          allowfullscreen></iframe>
+</div>
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+}
+
+.video-container iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}

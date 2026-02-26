@@ -1,0 +1,30 @@
+📘 Node.js Module Types (Quick Notes)
+🔹 1️⃣ CommonJS (Default)
+
+Old Node.js module system
+
+Uses require() and module.exports
+
+No need to add "type": "module"
+
+Example:
+const express = require("express");
+module.exports = something;
+
+✅ No file extension needed while importing
+✅ Used in many old projects
+
+🔹 2️⃣ ES Modules (Modern)
+
+Official JavaScript module system
+
+Uses import and export
+
+Add "type": "module" in package.json
+
+Example:
+import express from "express";
+export default something;
+
+⚠ Must include .js in imports
+⚠ Cannot mix with require in same file

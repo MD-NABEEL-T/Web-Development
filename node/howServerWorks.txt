@@ -1,0 +1,83 @@
+// When you create a server, you are:
+// Making a program that waits for requests and sends back responses.
+// That’s it. No magic.
+
+// 🔥 What makes something a server?
+
+// A server must:
+// Be running continuously
+// Wait for incoming requests
+// Send responses back
+
+// 🏢 Think of it like an apartment building
+
+// localhost = the building address
+// port = apartment number
+
+// 🌐 What happens if you type only:
+// http://localhost
+// By default, the browser tries:
+// Port 80
+// (Port 80 is the default HTTP port.)
+// But your server is running on port 3000.
+
+// So the browser knocks on door 80…
+// But your server is waiting at door 3000.
+// No answer.
+
+
+✅ Case 1: Server IS running on port 3000
+
+You run:
+
+node server.js
+
+Now your computer is:
+
+Listening on port 3000 and waiting.
+
+Then you open:
+
+http://localhost:3000
+
+// Here’s what happens step-by-step:
+
+// Browser sends a request to:
+
+// Computer: localhost
+
+// Port: 3000
+
+// Your Node server is already listening on that port.
+
+// So it receives the request.
+
+// This function runs:
+
+// (req, res) => {
+//    res.statusCode = 200
+//    res.setHeader('Content-Type', 'text/plain')
+//    res.end('Threessh')
+// }
+
+// Browser receives response → shows:
+
+// Threessh
+// ✔️ Everything works.
+
+
+
+So the correct logic is:
+
+Server listens on 3000
+
+Browser must send request to 3000
+
+If ports don’t match → no connection
+
+Think of it like calling someone:
+
+If your friend’s phone number ends with 3000,
+and you dial 5000,
+
+The call won’t magically redirect. It just fails.
