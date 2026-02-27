@@ -20,6 +20,6 @@ app.post('/', (req, res) => {
 
 app.get("/index", (req, res) => {
     console.log("Hey its index")
-    res.sendFile('templates/index.html', {root:__dirname})
+    res.sendFile('templates/index.html', {root:__dirname})  
     res.send('Hello By index')
-})
+}) 
