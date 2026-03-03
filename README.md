@@ -5,3 +5,5 @@ I HAVE SEEN ENOUGH LOSSES NO MORE SHITS NOW ONLY WORK.
 
 ok lets just go with the flow ok no need to plan what is next.
 REMINDER : WATCH INTERVIEW QUESTIONS IN JS CWH ..
+
+for now lets jsut finish the canteen app later we will work on this mern thing
