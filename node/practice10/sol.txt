@@ -1,0 +1,2 @@
+npm init -y 
+then declare type=module in package.json
