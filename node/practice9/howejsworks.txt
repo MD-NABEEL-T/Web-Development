@@ -1,0 +1,50 @@
+In Express.js, res.render() is used to render a template/view file into HTML and send it to the browser.
+
+Think of it like this:
+res.send() → sends raw text/HTML/data directly
+res.render() → takes a template file + data, converts it into HTML, then sends it
+
+Example with EJS:
+app.set("view engine", "ejs");
+
+app.get("/", (req, res) => {
+    res.render("home", { name: "Nabeel" });
+});
+
+Now Express will:
+Look inside the views folder
+Find home.ejs
+Replace variables with data
+Generate final HTML
+Send it to browser
+
+Example home.ejs:
+<h1>Hello <%= name %></h1>
+
+Browser receives:
+<h1>Hello Nabeel</h1>
+Why this is useful:
+
+Without render():
+
+res.send(`
+   <h1>Hello Nabeel</h1>
+`);
+
+That becomes messy for big websites.
+
+With render():
+
+HTML stays in separate files
+Easier styling with CSS
+Dynamic content becomes simple
+Cleaner backend code
+
+Common template engines used with res.render():
+EJS
+Pug
+Handlebars
+
+So basically:
+res.render() = "Take template + data → create HTML → send to client"
+That’s why server-side rendered websites use it a lot.

@@ -1,2 +1,9 @@
+#92 yt video
 created template folder copied boilercode from bootstrap.com and pasted in index.html
 using res.sendFile we display the html page
+and we are trying to push some variable into the html page so using blog slug
+go to ejs website copy command 
+change index.html->index.ejs and templates -> views
+so after that we use siteName variable by using this syntax
+      Hello <%= foo %>
+now we put the nav tag in another file "nav.ejs" and then using include we include this
