@@ -1,0 +1,2 @@
+created template folder copied boilercode from bootstrap.com and pasted in index.html
+using res.sendFile we display the html page
