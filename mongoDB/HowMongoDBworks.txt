@@ -1,0 +1,19 @@
+How MongoDB Compass Works
+1. MongoDB Server Runs in Background
+
+When MongoDB starts, a process called:
+
+mongod
+
+runs in the background.
+
+That process:
+
+stores data
+handles queries
+creates databases
+manages collections
+
+Compass itself does NOT store data.
+
+It only connects to the MongoDB server and lets you interact visually.
