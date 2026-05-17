@@ -1,1 +1,2 @@
 downloaded monogoDB 7th version and ran the command 
+ok we'll learn tomorrow because of exam 
