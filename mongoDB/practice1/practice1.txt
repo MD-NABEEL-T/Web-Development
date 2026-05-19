@@ -1,2 +1,4 @@
-downloaded monogoDB 7th version and ran the command 
-ok we'll learn tomorrow because of exam 
+downloaded monogoDB 7th version and ran the command
+open the mongodb shell 
+>db.courses.insertOne({name:"javascript"})
+if i write wrong collection name then another collection created
