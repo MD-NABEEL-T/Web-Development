@@ -1,0 +1,138 @@
+1. COMMONJS (Old Node.js way)
+
+This is the traditional Node.js module system.
+
+Uses:
+
+require()
+module.exports
+Exporting in CommonJS
+math.js
+function add(a, b) {
+    return a + b;
+}
+
+module.exports = add;
+
+Here:
+
+module.exports = add
+→ means:
+
+"Export this function so other files can use it."
+
+Importing in CommonJS
+app.js
+const add = require("./math");
+
+console.log(add(2, 3));
+
+Here:
+
+require("./math")
+→ means:
+
+"Bring the exported thing from math.js"
+
+How CommonJS Actually Thinks
+
+Node internally thinks like this:
+
+const exportedThing = require("./math");
+
+So whatever is inside:
+
+module.exports = something
+
+comes back from require().
+
+2. ES6 MODULES (Modern JavaScript way)
+
+This is the newer standard JavaScript module system.
+
+Uses:
+
+export
+import
+Exporting in ES6
+math.js
+export function add(a, b) {
+    return a + b;
+}
+
+OR
+
+function add(a, b) {
+    return a + b;
+}
+
+export default add;
+Importing in ES6
+app.js
+import { add } from "./math.js";
+
+OR for default export:
+
+import add from "./math.js";
+BIG DIFFERENCE
+
+This is the MOST IMPORTANT part.
+
+CommonJS exports ONE thing
+module.exports = add;
+
+require() gets that exact thing.
+
+ES6 exports NAMED things
+export function add() {}
+export function sub() {}
+
+Then import like:
+
+import { add, sub } from "./math.js";
+
+The curly braces mean:
+
+"Import specific named exports."
+
+Default Export vs Named Export
+Named Export
+math.js
+export function add() {}
+app.js
+import { add } from "./math.js";
+
+Must use SAME name.
+
+Default Export
+math.js
+export default function add() {}
+app.js
+import anythingYouWant from "./math.js";
+
+You can rename it because it's the default/main export.
+
+Why Two Module Systems Exist?
+
+Because history happened 😭
+
+CommonJS
+
+Came first for Node.js.
+
+At that time JavaScript had no official module system.
+
+So Node created:
+
+require
+module.exports
+ES6 Modules
+
+Later JavaScript officially introduced modules.
+
+So modern JS created:
+
+import
+export
+
+Now browsers + modern Node.js support this.

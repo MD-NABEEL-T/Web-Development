@@ -1,0 +1,3 @@
+usually beginners prefer this npm MongoDB
+but we are advanced coders so use mongoose
+installed npm i mongoose
