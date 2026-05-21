@@ -2,3 +2,11 @@ downloaded monogoDB 7th version and ran the command
 open the mongodb shell 
 >db.courses.insertOne({name:"javascript"})
 if i write wrong collection name then another collection created
+
+CRUD - Create Read Update Delete.
+created database using :use("crudDB")
+now when i console.log(db) 0utput shows crudDB
+
+then run insertOne({}) 
+// if i run the same twice then two docs will be created
+for more content we use insertMany([])

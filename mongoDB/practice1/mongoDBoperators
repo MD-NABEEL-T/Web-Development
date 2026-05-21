@@ -1,0 +1,53 @@
+| Operator | Meaning               |
+| -------- | --------------------- |
+| `$eq`    | Equal to              |
+| `$ne`    | Not equal to          |
+| `$gt`    | Greater than          |
+| `$gte`   | Greater than or equal |
+| `$lt`    | Less than             |
+| `$lte`   | Less than or equal    |
+
+
+🔹 Logical Operators
+Used to combine conditions.
+
+Operator	Meaning
+$and	Both conditions true
+$or	Any one condition true
+$not	Negates condition
+Example
+
+db.student.find({
+  $or: [{ age: 18 }, { name: "Ali" }]
+})
+
+🔹 Update Operators
+
+Used to modify documents.
+
+Operator	Meaning
+$set	Set new value
+$inc	Increase value
+$unset	Remove field
+$push	Add item to array
+
+Example
+
+db.student.updateOne(
+  { name: "Ali" },
+  { $set: { age: 20 } }
+)
+🔹 Array Operators
+
+Used with arrays.
+
+Operator	Meaning
+$in	Match any value
+$nin	Not in list
+$all	Match all values
+
+Example
+
+db.student.find({
+  skills: { $in: ["Java", "Python"] }
+})
