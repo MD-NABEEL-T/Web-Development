@@ -33,3 +33,5 @@ fetch('/about')
 
 ➡️ Page stays same
 ➡️ Data comes in console
+
+so npx is used to execute library without downloading it where as in npm we install it
