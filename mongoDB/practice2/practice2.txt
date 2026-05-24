@@ -1,3 +1,14 @@
 usually beginners prefer this npm MongoDB
-but we are advanced coders so use mongoose
+but we are advanced coders so use mongoose library 
 installed npm i mongoose
+then to change commonjs(default for npm init ) syntax to es6 by adding type module in package.json
+after connecting mongodb and then copy its link string and paste in await block
+
+then run the express using boilerplate code
+
+then write the quickstart code from mongoosejs in todo.js and then export it here and import in main.js
+
+aside this mongoose we can put "dev" : nodemon main.js in package.json and use "npm run dev" to run the program 
+
+in conn you have to write db name as todo then only the data comes inside it
+so when you reload the page the data's are put there again
