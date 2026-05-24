@@ -10,3 +10,5 @@ const server =http.createServer((req,res)=>{
 server.listen(port,hostname,()=>{
     console.log(`Server running at http://${hostname}:${port}/`)
 })
+
+this is normal http method for more production level we use express ok

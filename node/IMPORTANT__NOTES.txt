@@ -1,0 +1,35 @@
+node js is used for server side rendering .
+
+npm i --global nodemon
+after this when you run nodemon main.js then server will auto restart if change the code .
+
+🧠 Proper understanding:
+Node.js → runtime (runs JS outside browser)
+Express.js → framework to handle routes
+Server → the program you build using Node + Express
+👉 So:
+Server = your backend app running on Node using Express
+
+👉 GET
+Happens automatically when you open a URL
+Browser does it
+👉 POST
+You must trigger it manually
+Browser will NOT send POST just by opening a page
+
+Use POST when you need to send data to the server or perform an action that changes something (like login, signup, saving data).
+Use GET only when you’re requesting data without modifying anything, since it’s meant to be safe and data can be exposed in the URL.
+
+1. Normal browser GET
+👉 Type in URL
+/about
+
+➡️ Page changes
+
+2. fetch GET
+fetch('/about')
+  .then(res => res.text())
+  .then(data => console.log(data))
+
+➡️ Page stays same
+➡️ Data comes in console

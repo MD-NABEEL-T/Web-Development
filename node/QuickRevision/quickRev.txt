@@ -1,0 +1,52 @@
+go to express official page and copy the code for hello world
+and then paste the boiler code in main.js then install express then run the node and open localhost:3000 you can see the result 
+that is the intro
+
+when you use slug then we write req.param.slug because when you console.log the slug it is a big header where the params contains what you need for refereance "paramsinslug.png" 
+
+🔹 What is a Route?
+
+In Express.js, a route is:
+
+A rule that tells your server what to do when a user visits a specific URL or in simple
+a route is nothing but to prepare what to reply to the server when user enters a specific url
+🔹 Types of Routes
+1. Static Route
+app.get('/about', ...)
+Fixed path
+Always same
+2. Dynamic Route
+app.get('/blog/:slug', ...)
+:slug = variable
+Can change based on URL
+
+👉 /blog/react
+👉 /blog/node
+
+Same route, different data.
+
+🔹 What is req and res?
+
+Every route has this:
+
+(req, res)
+req → what user sends (URL, data, params)
+res → what server sends back
+
+get request is used to get something from the server it maybe page or function etc
+post request is used to give something to the server like passwords etc .
+🧠 Proper understanding:
+Node.js → runtime (runs JS outside browser)
+Express.js → framework to handle routes
+Server → the program you build using Node + Express
+👉 So:
+Server = your backend app running on Node using Express
+
+
+NEXTLY we create public folder 
+then created Mypage.html which has frontend page when the user triggers it using the buttton the fetch request gets the / from express and sends the response as res.send which is displayed in console hope you get this to understand refer "POST(Working).png"
+
+current working is frontend trigger -> fetch()-> server -> matches post or get (/) -> returns only the result for and stores in b -> console the data 
+
+ANOTHER THING IS THAT THE fetch thing we have done can be done using get also because here we are only performing basic operations so both post and get can be used but post used for conveneince
+also put will work

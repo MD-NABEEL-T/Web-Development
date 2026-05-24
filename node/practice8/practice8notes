@@ -1,0 +1,4 @@
+learning middleware 
+node setup ,express install ,boiler code and then created public folder and tried to access the nabeel.txt file with app.use and commented that line and created 2 middlewares
+
+if you comment out only the next() line then the page will get stuck that is where middleware is used for executing before page responds like it writing date iin page and appending every time you refresh page

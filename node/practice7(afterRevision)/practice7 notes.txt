@@ -1,0 +1,14 @@
+npm init -y (node )
+express install 
+boiler code of express in main.js 
+created folder of templates
+serving html files to learn
+
+🧠 Clean mental model
+public → auto serve (app.use)
+templates → manual serve (sendFile)
+
+so we created a folder for routes to use blog
+and after writing some code in blog we import the file in main.js using require and add a line app.use(blog) because if we call any files than it will serve first you know that 
+
+we have done this to prove how to handle code in organized way
