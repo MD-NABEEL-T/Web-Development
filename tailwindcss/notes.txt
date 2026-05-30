@@ -1,0 +1,5 @@
+use tailwindplay 
+use tailblocks.cc
+use npm init -y
+
+i skipped the tailwindcss because now tailwindcss has changed and now if you add tailwindcss props then it automatically write output.css where there is a code and modification in props also updates it.

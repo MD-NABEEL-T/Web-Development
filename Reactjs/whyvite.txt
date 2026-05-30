@@ -1,0 +1,16 @@
+command to create :
+npm create vite@latest my-react-app -- --template react
+
+to run:
+cd my-react-app
+npm install
+npm run dev
+
+Why Vite became popular
+Lightning fast dev server
+Instant hot reload
+Smaller setup
+Modern ES modules
+Better developer experience
+
+This is why almost all new React projects, tutorials, startups, and portfolios use Vite now. 

@@ -1,0 +1,3 @@
+use rfce to create components
+upar se dekhlenge just understand the stuff and dont try to mug it up then we'll dive into the projects
+props- data passing using components like parameters
