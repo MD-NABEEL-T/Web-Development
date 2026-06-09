@@ -1,0 +1,34 @@
+always close single tag <img /> like this 
+we use className in jsx file not class
+
+for using javascript variable we use {}
+
+created a file named Navbar.js inside src/components folder 
+we use index.css for complete css in the app and unlike jsx files the css files only importing is enought to execute 
+
+learned props :
+// Parent Component
+function App() {
+    return (
+        <div>
+            <StudentCard name="Rohan" age={20} course="MERN" />
+            <StudentCard name="Priya" age={22} course="Python" />
+        </div>
+    )
+}
+
+// Child Component
+function StudentCard({ name, age, course }) {
+    return (
+        <div>
+            <h2>{name}</h2>
+            <p>Age: {age}</p>
+            <p>Course: {course}</p>
+        </div>
+    )
+}
+i have not done much practically #106 because most of it is css. 
+
+#107
+In Navbar.jsx , useState working
+here count is the state initialized as 0 using useState setCount is the function used to manipulate that data

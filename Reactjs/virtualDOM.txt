@@ -1,0 +1,13 @@
+Without React — old school way:
+when something changes, the browser re-renders the entire page which is slow because touching the real DOM is expensive.
+React's approach with Virtual DOM:
+
+State changes
+     ↓
+React re-renders the component (in memory, not real DOM)
+     ↓
+React compares new virtual DOM with previous virtual DOM
+     ↓
+Finds exactly what changed (this process is called "diffing")
+     ↓
+Updates ONLY that specific part in the real DOM

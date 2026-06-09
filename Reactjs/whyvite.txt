@@ -1,9 +1,10 @@
 command to create :
 npm create vite@latest my-react-app -- --template react
 
-to run:
 cd my-react-app
-npm install
+npm i
+
+to run:
 npm run dev
 
 Why Vite became popular

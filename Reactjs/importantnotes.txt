@@ -1,0 +1,8 @@
+Bundler — when you write a React app you have 100s of separate files (jsx, css, images etc). The browser can't efficiently load all of them separately. So the bundler just combines and converts everything into a few optimized files the browser can understand. 
+
+Vite and Webpack are just tools that do this job. When you run npm run build that's the bundler doing its thing.
+Render — two different things 
+Your code → React figures out what to show (React render)
+           → Browser paints it on screen (Browser render)
+
+** React doesnt load youknow that right
