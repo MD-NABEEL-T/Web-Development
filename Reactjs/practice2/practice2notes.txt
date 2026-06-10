@@ -32,3 +32,20 @@ i have not done much practically #106 because most of it is css.
 #107
 In Navbar.jsx , useState working
 here count is the state initialized as 0 using useState setCount is the function used to manipulate that data
+
+#108
+useEffect
+useState = "remember this value, and redraw when it changes"
+useEffect = "after redrawing, do this outside thing"
+useRef — store a value + changing it does nothing to the screen (and as a bonus, can hold a real DOM element)
+
+useState  →  change value  →  React redraws  ✅
+useRef    →  change value  →  React does nothing  🔇
+
+we added useEffect function in navbar.jsx to check rerendering in console since the state changes when clicked
+and this is why we use react because it does not render entire page but only the component means only the navbar.jsx is rerenderend when clicked button
+
+strict mode if you comment then the renrendering twice at beginning wont happen
+so to understand useref we add a counter in console and use it and the best part is it does not rerenders means does not change the page right 
+
+also used btnref see navbar.jsx to understand

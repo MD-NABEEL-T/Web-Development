@@ -1,3 +1,13 @@
+use code -g project to open the folder in vs code
+
+React builds websites using components — small reusable pieces of UI, like Lego blocks. Each component is just a JavaScript function that returns what to show on screen.
+
+State — remembering things
+
+Props — inputs to a component
+Hooks — superpowers for functions
+Hooks are built-in React functions that start with use. They let your component do things beyond just showing UI.
+
 Bundler — when you write a React app you have 100s of separate files (jsx, css, images etc). The browser can't efficiently load all of them separately. So the bundler just combines and converts everything into a few optimized files the browser can understand. 
 
 Vite and Webpack are just tools that do this job. When you run npm run build that's the bundler doing its thing.

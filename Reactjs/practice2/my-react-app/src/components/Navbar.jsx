@@ -1,8 +1,21 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState , useEffect ,useRef} from 'react'
 
 const Navbar= () => {
   const [count, setCount] = useState(0)
+  // useEffect(() => {
+  //   console.log("Navbar re-rendering")
+  // })
+  const a=useRef(0)
+  useEffect(() => {
+    a.current =a.current +1
+    console.log(`the rerendering without letting the page change ${a.current}`)
+  })
+
+  const btnRef=useRef()
+  useEffect(() => {
+    btnRef.current.style.backgroundColor="pink"
+  }, [])
   return (
     <div>
         <nav>
@@ -13,7 +26,7 @@ const Navbar= () => {
             </ul>
         </nav>
         i failed<br />
-        <button onClick={() => setCount(count + 1)}>
+        <button ref={btnRef} onClick={() => setCount(count + 1)}>
             Clicked {count} times
         </button>
     
