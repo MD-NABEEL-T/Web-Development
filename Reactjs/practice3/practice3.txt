@@ -1,2 +1,17 @@
+#110
 so created another button and it renders based on the condition change the useState(true) ok 
 
+to create a component in the samefile see Todo
+
+now rendering lists see the image and then the App.jsx file
+then i created props 
+we use map to display the list of props
+
+#112
+to practice this we created another jsx file named EventHandle
+added a handle function to trigger an alert that a button is clicked
+created a EventHandle.css file and imported it.
+
+created name,setName with usestate and then created the text field
+you type "J"  →  e.target.value = "J"    →  setName("J")
+you type "o"  →  e.target.value = "Jo"   →  setName("Jo")

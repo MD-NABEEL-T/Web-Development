@@ -16,3 +16,6 @@ Your code → React figures out what to show (React render)
            → Browser paints it on screen (Browser render)
 
 ** React doesnt load youknow that right
+to use js in react we write {}
+
+<> </> is called a Fragment

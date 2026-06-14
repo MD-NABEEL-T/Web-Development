@@ -7,9 +7,29 @@ import './App.css'
 function App() {
   const [count, setCount] = useState(0)
   const [showbtn, setShowBtn] = useState(false)
+  const [todo, setTodo] = useState([
+    {
+      title:"i am a todo",
+      description:"i am a description"
+    },
+    {
+      title:"i am another todo",
+      description:"Different description"
+    }
+  ])
+
+  const Todo=({todo})=>{
+    return(
+    <>
+    <div className="todo">{todo.title}</div>
+    <div className="todo">{todo.description}</div>
+    </>)
+  }
   return (
     <>
-      <section id="center">
+      {/* <Todo/> */}
+  {todo.map((item, index) => <Todo key={index} todo={item} />)}
+        <section id="center">
         <div className="hero">
           <img src={heroImg} className="base" width="170" height="179" alt="" />
           <img src={reactLogo} className="framework" alt="React logo" />

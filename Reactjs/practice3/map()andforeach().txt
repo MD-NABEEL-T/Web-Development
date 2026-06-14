@@ -1,0 +1,22 @@
+const numbers = [1, 2, 3];
+const doubled = numbers.map(num => num * 2); 
+
+console.log(doubled); // [2, 4, 6] (New array)
+console.log(numbers); // [1, 2, 3] (Original remains unchanged)
+
+
+const numbers = [1, 2, 3];
+numbers.forEach(num => console.log(num)); // Logs 1, 2, 3
+
+const result = numbers.forEach(num => num * 2);
+console.log(result); // undefined
+
+Why it returns undefined: By definition in JavaScript, the forEach() method always returns undefined, no matter what you do inside it. It does not collect the results.How to Fix ItIf you want to capture the doubled numbers into the result variable, you must use map() instead:javascript
+
+so with foreach we can modify the existing array but cant store in another array but whereas in map when we modifyit it creates a new array right
+
+umbers.forEach((num, i) => {
+  numbers[i] = num * 2; 
+});
+
+console.log(numbers); // [2, 4, 6] (Original array is permanently changed)
