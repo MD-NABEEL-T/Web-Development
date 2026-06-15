@@ -1,0 +1,92 @@
+Imagine you're at a restaurant.
+Callback — "Call me when it's ready"
+You order food. The waiter doesn't make you wait at the counter — you give them your phone number and go sit down. When the food is ready, they call you.
+javascriptfunction orderFood(callback) {
+  setTimeout(() => {
+    callback("Your pizza is ready!");
+  }, 2000);
+}
+
+orderFood((message) => {
+  console.log(message); // "Your pizza is ready!" (after 2 seconds)
+});
+The function (message) => console.log(message) is the callback — code that runs later, when the task finishes.
+Callback Hell — nested orders
+Now imagine: after pizza, you want dessert. After dessert, you want coffee. After coffee, you want the bill. Each one only happens after the previous one finishes.
+javascriptorderFood((pizza) => {
+  console.log(pizza);
+  orderDessert((dessert) => {
+    console.log(dessert);
+    orderCoffee((coffee) => {
+      console.log(coffee);
+      getBill((bill) => {
+        console.log(bill);
+      });
+    });
+  });
+});
+See how it keeps going deeper and deeper to the right? That's callback hell — it's just ugly, hard to read, and if something fails halfway, error-handling gets messy.
+Promise — a "ticket" for your order
+Instead of giving the waiter your phone number, imagine they hand you a ticket that says "your order is in progress." The ticket will eventually become either:
+
+a "Done ✅" ticket (with your food), or
+a "Sorry, failed ❌" ticket (kitchen ran out of ingredients)
+
+javascriptfunction orderFood() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve("Your pizza is ready!");
+      // or: reject("Kitchen is closed!")
+    }, 2000);
+  });
+}
+Now you can write:
+javascriptorderFood()
+  .then((pizza) => console.log(pizza))
+  .catch((error) => console.log(error));
+.then() = "when it's done, do this"
+
+.catch() = "if it fails, do this"
+Chaining promises — same nested example, flattened
+javascriptorderFood()
+  .then((pizza) => {
+    console.log(pizza);
+    return orderDessert();
+  })
+  .then((dessert) => {
+    console.log(dessert);
+    return orderCoffee();
+  })
+  .then((coffee) => {
+    console.log(coffee);
+    return getBill();
+  })
+  .then((bill) => console.log(bill))
+  .catch((error) => console.log("Something went wrong:", error));
+Notice: it's a flat chain going down, not a pyramid going right. And only ONE .catch() is needed for everything.
+Async/Await — making it look like normal code
+async/await is just a nicer way to write the same promise code. No .then() chains — just normal-looking lines.
+javascript
+async function dinner() {
+  try {
+    const pizza = await orderFood();
+    console.log(pizza);
+
+    const dessert = await orderDessert();
+    console.log(dessert);
+
+    const coffee = await orderCoffee();
+    console.log(coffee);
+
+    const bill = await getBill();
+    console.log(bill);
+  } catch (error) {
+    console.log("Something went wrong:", error);
+  }
+}
+
+dinner();
+
+async before a function means "this function will do async work"
+await means "pause here until this promise finishes, then continue"
+try/catch handles errors, just like normal synchronous code

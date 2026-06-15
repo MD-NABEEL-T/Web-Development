@@ -7,7 +7,6 @@
 //     price:0,
 // });
 
-
 // db.courses.insertMany([
 //     {
 //       name: "Python Masterclass",

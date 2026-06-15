@@ -1,0 +1,5 @@
+Hot Module Replacement.It is a feature built into modern bundlers (like Vite, which you are using here) that instantly updates your website in the browser the exact second you save a file.
+How it works:
+No Full Reloads: Traditional development tools reload the whole browser page when you make a change, resetting your app's state (like resetting your button click count back to 0).
+Live Injections: HMR only replaces the specific file (module) you changed. If you change a Tailwind class or edit some text in App.jsx and press save, Vite injects that specific update instantly.
+Preserves State: Because the page doesn't reload, your "Count is 8" button will stay at 8 even after you modify the code around it.Try opening your src/App.jsx file, changing some text or adding a Tailwind class like text-blue-500, and hitting Save. You'll see the browser update immediately without reloading the page! Let me know if it works.
