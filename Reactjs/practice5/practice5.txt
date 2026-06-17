@@ -1,0 +1,57 @@
+#115
+Why Use React Router?
+1. Single Page Application (SPA)
+
+React apps usually have only one HTML file (index.html).
+
+React Router helps show different components based on the URL.
+
+Example:
+
+/          -> Home
+/about     -> About
+/contact   -> Contact
+
+Even though the URL changes, the page doesn't fully reload.
+
+for example
+Without React Router:
+
+function App() {
+  return <Home />
+}
+
+No matter what you do, only Home shows.
+
+1, run npm i react-router-dom
+and then create browser router and added path and elements.
+
+
+Imagine:
+createBrowserRouter()
+creates a GPS map.
+
+RouterProvider
+starts the GPS navigation.
+Without navigation, the map is useless.
+
+
+useNavigate()
+This is used when you want to change pages using JavaScript.
+import { useNavigate } from "react-router-dom";
+
+function Login() {
+  const navigate = useNavigate();
+
+  function handleLogin() {
+    alert("Login Successful");
+
+    navigate("/");
+  }
+
+  return (
+    <button onClick={handleLogin}>
+      Login
+    </button>
+  );
+}

@@ -1,0 +1,11 @@
+You have user data in App:
+const user = "Nabeel";
+
+Without Context:
+<App user={user} />
+
+Then Dashboard receives it:
+<Dashboard user={user} />
+This is called prop drilling -You're passing the same data through components that don't even use it.
+
+so we use useContext hook to do this work refer file app and button

@@ -1,0 +1,25 @@
+#117
+When should you use useMemo?
+
+✅ Heavy calculations
+
+filtering 10,000 products
+sorting large arrays
+complex math calculations
+
+✅ Prevent unnecessary recalculations
+
+When NOT to use it?
+
+❌ Simple calculations
+
+ARRAY BASICS 
+const nums = [1, 2, 3];
+also const nums = new Array(1,2,3,4);
+
+nums.push(4);      // Add at end
+nums.pop();        // Remove from end
+nums.unshift(0);   // Add at beginning
+nums.shift();      // Remove from beginning
+
+console.log(nums);

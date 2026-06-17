@@ -1,0 +1,29 @@
+First, without destructuring
+
+Suppose App sends props:
+
+<Button name="Nabeel" age={21} />
+
+In Button:
+
+function Button(props) {
+  return (
+    <div>
+      {props.name}
+      {props.age}
+    </div>
+  )
+}
+
+You can directly extract values:
+
+function Button({ name, age }) {
+  return (
+    <div>
+      {name}
+      {age}
+    </div>
+  )
+}
+
+This is called object destructuring.
