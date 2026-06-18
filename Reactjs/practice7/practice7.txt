@@ -1,0 +1,7 @@
+register() → Connect input to React Hook Form
+watch() → See value while typing
+handleSubmit() → Handle form submission
+errors → Show validation errors
+
+To know why import react and react dom
+React is used to create UI components, while ReactDOM is used to render those components into the browser's DOM. ReactDOM acts as a bridge between React and the actual web page.

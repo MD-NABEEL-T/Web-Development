@@ -1,3 +1,5 @@
+useMemo     → remembers VALUE
+useCallback → remembers FUNCTION
 #117
 When should you use useMemo?
 
@@ -13,6 +15,15 @@ When NOT to use it?
 
 ❌ Simple calculations
 
+
+import { useMemo } from "react";
+
+const result = useMemo(() => {
+  console.log("Calculating...");
+  return count * 1000;
+}, [count]);
+
+
 ARRAY BASICS 
 const nums = [1, 2, 3];
 also const nums = new Array(1,2,3,4);
@@ -23,3 +34,45 @@ nums.unshift(0);   // Add at beginning
 nums.shift();      // Remove from beginning
 
 console.log(nums);
+
+#118
+Why do we need it?
+
+Consider this:
+
+function App() {
+  const [count, setCount] = useState(0);
+
+  const handleClick = () => {
+    console.log("Button clicked");
+  };
+
+  return (
+    <>
+      <button onClick={() => setCount(count + 1)}>
+        Increment
+      </button>
+    </>
+  );
+}
+
+When count changes:
+
+App re-renders
+↓
+handleClick is created again
+
+Even though the code is the same, JavaScript creates a new function object.
+
+With useCallback
+import { useCallback } from "react";
+
+const handleClick = useCallback(() => {
+  console.log("Button clicked");
+}, []);
+
+Now React remembers the function.
+
+Re-render
+↓
+Same function reused
