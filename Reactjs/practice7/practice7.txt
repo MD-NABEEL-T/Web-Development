@@ -1,7 +1,32 @@
+after installing from react hook form ,pasted the const {} =useForm() and all ,
+then use ...register to access it s things
+and then print error message manually
+then disabled ={issubmitting} like that 
+  formState: { errors, isSubmitting },
+
+
+
+npm install cors
+
+
+ReactHookForm :
 register() → Connect input to React Hook Form
 watch() → See value while typing
 handleSubmit() → Handle form submission
 errors → Show validation errors
+
+You can do:
+
+<input name="username" />
+
+But React Hook Form also needs:
+
+onChange
+onBlur
+ref
+validation tracking
+register() sets all of that up automatically.
+
 
 To know why import react and react dom
 React is used to create UI components, while ReactDOM is used to render those components into the browser's DOM. ReactDOM acts as a bridge between React and the actual web page.

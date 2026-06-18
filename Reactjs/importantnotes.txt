@@ -1,5 +1,8 @@
-use code -g project to open the folder in vs code
+run npm i for every folder because node packages are deleted
 
+use code -g project to open the folder in vs code
+use rafce for const login =()=>{}
+use rfce for function login (){}
 React builds websites using components — small reusable pieces of UI, like Lego blocks. Each component is just a JavaScript function that returns what to show on screen.
 
 State — remembering things

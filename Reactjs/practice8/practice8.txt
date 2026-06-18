@@ -1,0 +1,31 @@
+so first i showed how we pass props here manually in Navbar.jsx and then 
+installed the react redux toolki from its website 
+created app/store.js pasted from the toolkit website 
+and then pasted imports in main.jsx
+and pasted this in app.jsx
+import { useSelector, useDispatch } from 'react-redux'
+import { decrement, increment } from './counterSlice'
+  const count = useSelector((state) => state.counter.value)
+  const dispatch = useDispatch()
+from Counter.js
+ran npm install @reduxjs/toolkit react-redux
+then created add () in counterslice and used it in app.jsx as you can see
+
+why Redux toolkit but not the usecontext 
+useContext
+Used to share data between components without prop drilling.
+Best for small applications.
+Suitable for:
+Theme (Dark/Light Mode)
+User Authentication
+Language Settings
+When context value changes, all components using that context may re-render.
+const user = useContext(UserContext);
+
+Redux Toolkit
+A state management library for large applications.
+Stores all global state in a central store.
+Components subscribe only to the data they need.
+Better performance and organization for complex apps.
+const user = useSelector((state) => state.user);
+dispatch(updateUser());
