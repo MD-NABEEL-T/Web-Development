@@ -2,6 +2,8 @@ const userModel = require("../models/user.model")
 const jwt =require("jsonwebtoken")
 // user register controller32
 
+// user register controller
+// POST /api /auth / register
 async function userRegisterController(req,res){
 
     const {email,password,name} = req.body
@@ -23,7 +25,7 @@ async function userRegisterController(req,res){
 
     const token=jwt.sign({userId:user._id},process.env.JWT_SECRET,{expiresIn:"3d"})
 
-    res.cookies("token",token)
+    res.cookie("token",token)
 
     res.status(201).json({
         user:{
@@ -35,6 +37,44 @@ async function userRegisterController(req,res){
     })
 }
 
+//user login controller
+// POST /api/auth/login
+
+async function userLoginController(req,res){
+    const {email,password} = req.body
+    
+    const user = await userModel.findOne({email}).select("password")
+
+    if(!user){
+        return res.status(401).json({
+            message:"Email is Invalid"
+        })
+    
+    }
+
+    const isValidPassword = await user.comparePassword(password)
+    if(!isValidPassword){
+        return res.status(401).json({
+            message:"Password is Invalid"
+        })
+    }
+
+    const token=jwt.sign({userId:user._id},process.env.JWT_SECRET,{expiresIn:"3d"})
+
+    res.cookie("token",token)
+
+    res.status(200).json({
+        user:{
+            _id:user._id,
+            email:user.email,
+            name:user.name
+        },
+        token
+    })
+}
+
+
 module.exports = {
-    userRegisterController
+    userRegisterController,
+    userLoginController
 }
