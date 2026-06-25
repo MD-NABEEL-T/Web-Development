@@ -1,3 +1,4 @@
+alright now code till 7.10 apply curd and bath , leave anam and eat and go to vellore learn some code
 1️⃣ Watch normally till *02:09:02*
 2️⃣ Then jump to *02:46:44 – Creating Transaction API*
 3️⃣ Complete that section
@@ -27,3 +28,11 @@ created userModel
 npm i jsonwebtoken
 
 //  app.js file is used to create server and manage configs
+
+
+enable login and then create workspace and run register,login and cookies will be created .
+and stored in db 
+
+enable mailing using cloud
+
+add email.service.js to access third party services that is mailconcept

@@ -1,0 +1,9 @@
+github link:https://github.com/ankurdotio/Difference-Backend-video
+node , express for backend
+jwt for auth 
+postman for testing
+nodemailer for mail from sir github
+mongoDB atlas for storage in mongo cloud servers 
+mongoDB compass for ui and for that you have got to connect the url that's all i guess
+
+refer from 1:00:00 for implementing nodemailer 
