@@ -36,3 +36,5 @@ and stored in db
 enable mailing using cloud
 
 add email.service.js to access third party services that is mailconcept
+
+email is sent using postman api
