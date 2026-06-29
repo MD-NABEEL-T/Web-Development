@@ -44,5 +44,22 @@ async function sendRegistrationEmail(userEmail, name) {
   await sendEmail(userEmail, subject, text, html); // ← this line was missing
 }
 
+async function sendTransactionEmail(userEmail, name, amount, toAccount) {
+  const subject = 'Transaction Successful'
+  const text = `HELLO ${name},\n\nYour transaction of $${amount} to account was Successful .\n The Backend ledger`;
+  const html = `<p> Hello ${name},</p><p>Your transation of ${amount} to account was Successful .</p><p><br>The Backend ledger</p>`;
+
+  await sendEmail(userEmail, subject, text, html);
+}
+
+
+async function sendTransactionFailureEmail(userEmail, name, amount, toAccount) {
+  const subject = 'Transaction Fail'
+  const text = `HELLO ${name},\n\nYour transaction of $${amount} to account was Failed .\n The Backend ledger`;
+  const html = `<p> Hello ${name},</p><p>Your transation of ${amount} to account was Failed .</p><p><br>The Backend ledger</p>`;
+
+  await sendEmail(userEmail, subject, text, html);
+}
+
 // Single export at the bottom
-module.exports = { sendRegistrationEmail };
+module.exports = { sendRegistrationEmail, sendTransactionEmail, sendTransactionFailureEmail };
