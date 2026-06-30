@@ -17,7 +17,7 @@ const ledgerSchema = new mongoose.Schema({
         type:mongoose.Schema.Types.ObjectId,
         ref:"transaction",
         required:[true,"ledger must be associated with a transaction"],
-        indes:true,
+        index:true,
         immutable:true
     },
     type:{
@@ -44,6 +44,6 @@ ledgerSchema.pre('updateMany',preventLedgerModification);
 ledgerSchema.pre('findOneAndDelete',preventLedgerModification);
 ledgerSchema.pre('findOneAndReplace',preventLedgerModification);
 
-const ledgerModel = mongoose.model('ledger',ledgerSchema);
+const ledgerModel = mongoose.model('Ledger',ledgerSchema);
 
 module.exports = ledgerModel; 

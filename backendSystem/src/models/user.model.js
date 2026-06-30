@@ -18,8 +18,13 @@ const userSchema =new mongoose.Schema({
         required:[true,"Password is required "],
         minlength:[6,"password should have more than 6 characters"],
         select:false // password cant be accessed by default using schema 
+    },
+    systemUser: {
+        type: Boolean,
+        default: false,
+        immutable: true,
+        select:false
     }
-
 },{
     timestamps:true
 })
@@ -39,10 +44,10 @@ userSchema.pre("save",async function(next){
 
 //compare the user schema entered by user and in the db 
 userSchema.methods.comparePassword =async function(password){
-    console.log(password)
+    // console.log(password)
     return await bcrypt.compare(password,this.password)
 }
 
-const userModel =mongoose.model("user",userSchema)
+const userModel =mongoose.model("User",userSchema)
 
 module.exports = userModel

@@ -1,4 +1,5 @@
-
+David goggins
+https://youtube.com/shorts/bq0ou4a8GBA?si=Mx3D6cHkC8E8ot9-
 1️⃣ Watch normally till *02:09:02*
 2️⃣ Then jump to *02:46:44 – Creating Transaction API*
 3️⃣ Complete that section
@@ -38,3 +39,5 @@ enable mailing using cloud
 add email.service.js to access third party services that is mailconcept
 
 email is sent using postman api
+
+used uui generator website for idempotency key
