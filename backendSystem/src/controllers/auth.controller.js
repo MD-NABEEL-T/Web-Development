@@ -1,7 +1,7 @@
 const userModel = require("../models/user.model")
 const jwt = require("jsonwebtoken")
 const emailService = require("../services/email.service")
-
+const tokenBlacklistModel = require("../models/blacklist.model")
 // POST /api/auth/register
 async function userRegisterController(req, res) {
     const { email, password, name } = req.body
@@ -64,4 +64,18 @@ async function userLoginController(req, res) {
     // ❌ Removed email call from here — it doesn't belong in login
 }
 
-module.exports = { userRegisterController, userLoginController }
+// user logout controller
+async function userLogoutController(req, res) {
+    const token = req.cookies.token || req.headers.authorization?.split(" ")[1]
+
+    if (!token) {
+        return res.status(400).json({ message: "No token provided" })
+    }
+
+    await tokenBlacklistModel.create({ token })
+
+    res.cookie("token", "") // Clear the cookie
+
+    res.status(200).json({ message: "User logged out successfully" })
+}
+module.exports = { userRegisterController, userLoginController, userLogoutController }

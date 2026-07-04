@@ -94,11 +94,12 @@ async function createTransaction(req, res) {
     }
 
     // 5, Create transaction (PENDING)
-
+let transaction;
+try{
     const session = await mongoose.startSession()
     session.startTransaction()
 
-    const transaction = new transactionModel({
+    transaction = new transactionModel({
         fromAccount,
         toAccount,
         amount,
@@ -112,6 +113,15 @@ async function createTransaction(req, res) {
         transaction: transaction._id,
         type: "DEBIT"
     }], { session })
+
+    await (()=>{
+        return new Promise((resolve) =>{
+            setTimeout(()=>{
+                resolve()
+            }   , 10000)
+        })
+    })()
+
     const creditLedgerEntry = await ledgerModel.create([{
         account: toAccount,
         amount: amount,
@@ -119,12 +129,14 @@ async function createTransaction(req, res) {
         type: "CREDIT"
     }], { session })
 
-    transaction.status = "COMPLETED"
-    await transaction.save({ session })
+    await transactionModel.findOneandUpdate({ _id: transaction._id }, { status: "COMPLETED" }, { session })
 
     await session.commitTransaction()
     session.endSession()
-
+}
+catch(error){
+    console.error("Error occurred while processing transaction:", error)
+}
     // 10. send email notification
 
     await emailService.sendTransactionEmail(req.user.email, req.user.name, amount, toAccount)
